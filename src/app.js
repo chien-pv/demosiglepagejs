@@ -1,10 +1,28 @@
-var arr = [3, 5, 6, 77, 8];
-let [x, y, z, k, l, m] = arr;
+let page = `<ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            </ul>`;
 
-let abc = () => {
-  var a = "Hello";
-  return `<a> ${a} </a>`;
-};
+let aboutpage = `<dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+          </dl>`;
 
-document.getElementsByTagName("h1")[0].innerHTML = abc();
-document.getElementsByTagName("h1")[0].innerHTML = "Hello ABC";
+// console.log(window.location.pathname);
+
+var pathname = window.location.pathname;
+
+switch (pathname) {
+  case "/home":
+    document.getElementById("app").innerHTML = page;
+    break;
+  case "/about":
+    document.getElementById("app").innerHTML = aboutpage;
+    break;
+  default:
+    document.getElementById("app").innerHTML = page;
+    break;
+}

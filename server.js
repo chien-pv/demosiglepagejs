@@ -5,7 +5,7 @@ var path = require("path");
 
 app.use(express.static("lib"));
 
-app.get("/", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
