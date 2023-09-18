@@ -1,5 +1,3 @@
-// console.log(window.location.pathname);
-
 document.addEventListener("DOMContentLoaded", function () {
   document.body.addEventListener("click", function (e) {
     e.preventDefault();
